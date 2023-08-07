@@ -192,7 +192,6 @@ def returnTagById(request,tag_id):
         'tag': tag,
         'articlesRegisteredWithTag': articlesRegisteredWithTag,
         'authorsRegisteredWithTag': authorsRegisteredWithTag,
-
     }
     return HttpResponse(template.render(context, request))
 
@@ -243,6 +242,7 @@ def returnAuthorById(request,author_id):
         'author': author,
         'articles': articles
     }
+    
     return HttpResponse(template.render(context, request))
 
 def returnPublishers(request):
